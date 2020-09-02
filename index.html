@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script defer src="all.js"></script> <!--load all styles -->
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <img id="logo" src="logo.png" alt="Dice Game Logo">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+           
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+
+
+            <button onClick="openPopup();" class="btn-instructions"><i class="ion-ios-plus-outline"></i>Game Rules</button>
+            <div id="test" class="popup">
+                
+                <div id="rulesTxt">
+                     <h4>
+                        <ol>
+                            <h2 id ="rulesHeading">How To Play</h2>
+                            <li>Each turn, a player rolls a dice as many times as they want. Each result get added to their <em>current score</em>.</li>
+                            <li>If player rolls a 1, the <em>overall score</em> gets lost. After that, it's the next player's turn.</li>
+                            <li>The player can choose to <em>'Hold'</em>, which means that the <em>current score</em> gets added to their <em>overall score</em>. After that, it's the next player's turn.</li>
+                            <li>The 1st player to <em><strong>30</strong></em> wins if there is no winning score set.</li>
+                        </ol>
+                    </h4>
+                </div>
+               
+                
+                <div class="cancel" onclick="closePopup();"><i class="far fa-window-close cancel fa-lg"></i></div>
+            </div>
+            <div id="winningScore">
+                <label for="socre">Set the winning score</label>
+                <input id="set_score"  type="number" name="score" id="score" placeholder="Winning Score" class="placeholder">
+            </div>
+
+
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+            <img src="dice-5.png" alt="Dice" class="diceTwo">
+        </div>
+        
+        <script src="callenge1.js"></script>
+    </body>
+</html>
